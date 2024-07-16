@@ -1,9 +1,15 @@
 
 > Open this page at [https://defham140.github.io/arch-bit/](https://defham140.github.io/arch-bit/)
 
-## Sample
+## Usage
 
+### ``begin``
+
+Use the ``begin`` block to start
+
+```blocks
 archi.begin()
+```
 
 ## Use as Extension
 
