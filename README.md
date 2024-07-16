@@ -1,6 +1,8 @@
 
 > Open this page at [https://defham140.github.io/arch-bit/](https://defham140.github.io/arch-bit/)
-##Sample
+
+## Sample
+
 archi.begin()
 
 ## Use as Extension
