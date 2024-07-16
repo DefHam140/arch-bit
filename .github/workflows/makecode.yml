@@ -4,26 +4,26 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [12.x, 14.x]  # Update Node.js versions
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install
+      - name: Install dependencies
         run: |
-          npm install -g pxt
-          pxt target microbit
-      - name: build
+          npm install pxt
+          npx pxt target microbit  # Use npx to run pxt locally
+      - name: Build project
         run: |
-          pxt install
-          pxt build --cloud
+          npx pxt install
+          npx pxt build --cloud
         env:
           CI: true
+          DEBUG: '*'  # Add this line for detailed logs
