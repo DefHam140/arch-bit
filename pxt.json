@@ -1,7 +1,8 @@
 {
     "name": "pxt-arch-bit",
     "version": "1.0.0",
-    "description": "",
+    "description": "Archi microbit library",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*",
